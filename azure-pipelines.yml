@@ -1,24 +1,49 @@
 jobs:
-- job: Windows
+- job: WindowsServer2019
+  pool:
+    vmImage: 'windows-2019'
+  steps:
+  - template: templates/systeminfo/windows.yml
+  - template: templates/steps.yml
+  - powershell: |
+
+- job: WindowsServer2016
   pool:
     vmImage: 'vs2017-win2016'
   steps:
   - template: templates/systeminfo/windows.yml
   - template: templates/steps.yml
-  - script: |
+  - powershell: |
 
-- job: Linux
+- job: WindowsServer1803
+  pool:
+    vmImage: 'win1803'
+  steps:
+  - template: templates/systeminfo/windows.yml
+  - template: templates/steps.yml
+  - powershell: |
+
+- job: WindowsServer2012R2
+  pool:
+    vmImage: 'vs2015-win2012r2'
+  steps:
+  - template: templates/systeminfo/windows.yml
+  - template: templates/steps.yml
+  - powershell: |
+
+- job: Ubuntu1604
   pool:
     vmImage: 'ubuntu-16.04'
   steps:
+  - script: |
   - template: templates/systeminfo/linux.yml
   - template: templates/steps.yml
-  - script: |
+  - powershell: |
 
-- job: macOS
+- job: macOS1013
   pool:
     vmImage: 'macOS-10.13'
   steps:
   - template: templates/systeminfo/macos.yml
   - template: templates/steps.yml
-  - script: |
+  - powershell: |
