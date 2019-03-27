@@ -4,6 +4,7 @@ jobs:
     vmImage: 'vs2017-win2016'
   steps:
   - template: templates/systeminfo/windows.yml
+  - template: templates/steps.yml
   - script: |
 
 - job: Linux
@@ -11,6 +12,7 @@ jobs:
     vmImage: 'ubuntu-16.04'
   steps:
   - template: templates/systeminfo/linux.yml
+  - template: templates/steps.yml
   - script: |
 
 - job: macOS
@@ -18,4 +20,5 @@ jobs:
     vmImage: 'macOS-10.13'
   steps:
   - template: templates/systeminfo/macos.yml
+  - template: templates/steps.yml
   - script: |

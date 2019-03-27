@@ -1,0 +1,4 @@
+# templates/steps.yml
+
+steps:
+- script: |
