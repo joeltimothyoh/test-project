@@ -1,0 +1,21 @@
+jobs:
+- job: Windows
+  pool:
+    vmImage: 'vs2017-win2016'
+  steps:
+  - template: templates/systeminfo/windows.yml
+  - script: |
+
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - template: templates/systeminfo/linux.yml
+  - script: |
+
+- job: macOS
+  pool:
+    vmImage: 'macOS-10.13'
+  steps:
+  - template: templates/systeminfo/macos.yml
+  - script: |

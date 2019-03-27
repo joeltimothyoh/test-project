@@ -1,0 +1,9 @@
+# templates/systeminfo/windows.yml
+
+steps:
+- powershell: |
+    whoami
+    systeminfo
+    Get-PSDrive
+    $PSVersionTable | Out-String
+  displayName: 'System Info'

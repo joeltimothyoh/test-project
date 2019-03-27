@@ -1,0 +1,9 @@
+# templates/systeminfo/macos.yml
+
+steps:
+- script: |
+    whoami
+    system_profiler -detailLevel mini
+    df -h
+    top -l 1 -s 0 | grep PhysMem
+  displayName: 'System Info'
