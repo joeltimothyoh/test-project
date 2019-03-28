@@ -4,7 +4,7 @@ begin {
 }process {
     try {
         # Clone project
-        git clone "$projectUrl"; if ($?) { throw }
+        git clone "$projectUrl"; if ($LASTEXITCODE) { throw }
         Push-Location "$projectName"
         Get-ChildItem -Force | Format-Table
         # Test project
