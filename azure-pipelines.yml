@@ -5,7 +5,6 @@ jobs:
   steps:
   - template: templates/systeminfo/windows.yml
   - template: templates/steps.yml
-  - powershell: |
 
 - job: WindowsServer2016
   pool:
@@ -13,7 +12,6 @@ jobs:
   steps:
   - template: templates/systeminfo/windows.yml
   - template: templates/steps.yml
-  - powershell: |
 
 - job: WindowsServer1803
   pool:
@@ -21,7 +19,6 @@ jobs:
   steps:
   - template: templates/systeminfo/windows.yml
   - template: templates/steps.yml
-  - powershell: |
 
 - job: WindowsServer2012R2
   pool:
@@ -29,7 +26,6 @@ jobs:
   steps:
   - template: templates/systeminfo/windows.yml
   - template: templates/steps.yml
-  - powershell: |
 
 - job: Ubuntu1604
   pool:
@@ -38,7 +34,6 @@ jobs:
   - script: |
   - template: templates/systeminfo/linux.yml
   - template: templates/steps.yml
-  - powershell: |
 
 - job: macOS1013
   pool:
@@ -46,4 +41,3 @@ jobs:
   steps:
   - template: templates/systeminfo/macos.yml
   - template: templates/steps.yml
-  - powershell: |
