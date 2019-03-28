@@ -8,7 +8,7 @@ begin {
         Push-Location "$projectName"
         Get-ChildItem -Force | Format-Table
         # Test project
-        Import-Module "./Modules/$($projectName)/Get-SMARTReport.psm1"
+        Import-Module "./Modules/$($projectName)/Get-StorageReport.psm1"
         Get-StorageReport
         
     }catch {
