@@ -8,6 +8,7 @@ begin {
         Push-Location "$projectName"
         Get-ChildItem -Force | Format-Table
         # Test project
+        git checkout dev
         Import-Module "./Modules/$($projectName)/Get-StorageReport.psm1"
         Get-StorageReport
         
