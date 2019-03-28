@@ -8,6 +8,7 @@ begin {
         Push-Location "$projectName"
         Get-ChildItem -Force | Format-Table
         # Test project
+        git checkout dev
         Import-Module "./Modules/$($projectName)/Get-SMARTReport.psm1"
         Get-SMARTReport
     }catch {
