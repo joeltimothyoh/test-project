@@ -1,4 +1,5 @@
 # templates/steps.yml
 
 steps:
-- powershell: |
+- powershell: |  
+  errorActionPreference: continue
