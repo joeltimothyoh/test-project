@@ -1,5 +1,5 @@
 begin {
-    $projectUrl = 'https://github.com/namespace/projectname.git'
+    $projectUrl = 'https://github.com/joeltimothyoh/Get-SMARTReport.git'
     $projectName = [System.IO.Path]::GetFileNameWithoutExtension($projectUrl)
 }process {
     try {
@@ -8,6 +8,8 @@ begin {
         Push-Location "$projectName"
         Get-ChildItem -Force | Format-Table
         # Test project
+        Import-Module "Modules/$($projectName)/Get-SMARTReport.psm1"
+        Get-SMARTReport
     }catch {
         throw
     }
