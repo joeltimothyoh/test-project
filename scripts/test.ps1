@@ -4,11 +4,11 @@ begin {
 }process {
     try {
         # Clone project
-        git clone "$projectUrl"; if ($?) { throw }
+        git clone "$projectUrl"; if ($LASTEXITCODE) { throw }
         Push-Location "$projectName"
         Get-ChildItem -Force | Format-Table
         # Test project
-        Import-Module "Modules/$($projectName)/Get-SMARTReport.psm1"
+        Import-Module "./Modules/$($projectName)/Get-SMARTReport.psm1"
         Get-SMARTReport
     }catch {
         throw
