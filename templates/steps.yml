@@ -2,5 +2,5 @@
 
 steps:
 - powershell: |
-    # ./scripts/test.ps1
+    ./scripts/test.ps1
   errorActionPreference: continue
