@@ -5,7 +5,6 @@ jobs:
   steps:
   - template: templates/systeminfo/windows.yml
   - template: templates/steps.yml
-  - script: |
 
 - job: Linux
   pool:
@@ -13,7 +12,6 @@ jobs:
   steps:
   - template: templates/systeminfo/linux.yml
   - template: templates/steps.yml
-  - script: |
 
 - job: macOS
   pool:
@@ -21,4 +19,3 @@ jobs:
   steps:
   - template: templates/systeminfo/macos.yml
   - template: templates/steps.yml
-  - script: |
